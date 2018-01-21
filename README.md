@@ -1,6 +1,6 @@
 # README
 
-This app Has funtion of Sigup/SignIn through Google API and Search Video on Youtube using Youtube APi and list the top video of paticluar Query.
+This app Has function of Signup/SignIn through Google API and Search Video on Youtube using Youtube API and list the top video of particular Query.
 
 It store Name, Email and Token of user who signup through this App
 
