@@ -1,17 +1,18 @@
 class SearchesController < ApplicationController
-  def create
-    @search_terms = params[:search][:title]
-    youtube_service = YoutubeService.new(@search_terms)
-    @res = youtube_service.main
-    puts @res
-    redirect_to searches_path
+  before_action :set_auth
 
+  def new
+    @search = Search.new
+    if request.post?
+      @search_terms = params[:search][:title]
+      youtube_service = YoutubeService.new(@search_terms)
+      @res = youtube_service.main
+    end
   end
- def new
-   @search = Search.new
-end
-def index
-  @res = @res
-  puts @res
-end
+
+  private
+  def set_auth
+    @auth = session[:omniauth] if session[:omniauth]
+  end
+
 end

@@ -29,7 +29,7 @@
   			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   				<ul class="nav navbar navbar-right">
   					<% if current_user%>
-  					<li><%= link_to 'Sign Out', 'sign_out', method: :delete%></li>
+            <li>Signed in as: <%= current_user.name%> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'image-circle')%></li>
 
   					<% else %>
   					<li><%= link_to "/auth/google_oauth2" do %> <%= image_tag('https://www.google.com.pk/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png')%><%end%></li>
@@ -47,7 +47,7 @@
   		<div class="text-center">
   			<h1>Welcome, <%= current_user.name%></h1>
   			<h4>Logged In with: <strong><em><%= @auth['provider'].capitalize %></em></strong> </h4>
-  			<%= image_tag ('https://www.google.com.pk/images/branding/googlelogo/2x/googlelogo_color_120x44dp.pngp')%>
+  			<%= image_tag ('https://www.google.com.pk/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png')%>
   		</div>
   	<% end %>
     <%= yield %>

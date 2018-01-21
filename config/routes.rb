@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
 
-  root 'home#index'
+  root 'searches#new'
+  post 'searches/new'
 
   get 'home/profile'
   # get 'searches/new'
