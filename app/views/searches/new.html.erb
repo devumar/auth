@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <h1 class="w100 text-center"><a href="index.html">YouTube  Search</a></h1>
+            <h1 class="w100 text-center"><a href="new.html">YouTube  Search</a></h1>
         </header>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -25,11 +25,10 @@
                     <%=f.submit"Search", class: "form-control btn btn-primary w100" %>
                   </div>
                 <% end %>
-
                 <% if @res.present?%>
-                  <% @res.each do |res| %>
+                    <% @res.each do |video| %>
                     <ul class="list-group">
-                      <li class="list-group-item disabled"><%= res %></li>
+                      <a href="https://www.youtube.com/watch?v=<%=video[:id]%>"> <li class="list-group-item "><%= video[:title] %></li></a>
                     </ul>
                   <% end %>
                 <% end %>

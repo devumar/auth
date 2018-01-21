@@ -46,13 +46,12 @@ class YoutubeService
 	    )
 
 	    videos = []
-
 	    # Add each result to the appropriate list, and then display the lists of
 	    # matching videos, channels, and playlists.
 	    search_response.data.items.each do |search_result|
 	      case search_result.id.kind
 	        when 'youtube#video'
-	          videos << "#{search_result.snippet.title} (#{search_result.id.videoId})"
+						videos << { title: search_result.snippet.title, id: search_result.id.videoId}
 	      end
 	    end
 	  return videos

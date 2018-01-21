@@ -13,6 +13,5 @@ class SessionsController < ApplicationController
 		session[:user_id] = nil
 		session[:omniauth] = nil
 		redirect_to root_url, notice: "SIGNED OUT"
-
 	end
 end

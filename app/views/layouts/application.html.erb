@@ -30,9 +30,10 @@
   				<ul class="nav navbar navbar-right">
   					<% if current_user%>
             <li>Signed in as: <%= current_user.name%> - <%= image_tag(@auth['info']['image'], width: '50', height: '50', class: 'image-circle')%></li>
+            <li><%= link_to 'Log out', log_out_path, method: :delete%></li>
 
   					<% else %>
-  					<li><%= link_to "/auth/google_oauth2" do %> <%= image_tag('https://www.google.com.pk/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png')%><%end%></li>
+  					<li><%= link_to "/auth/google_oauth2" do %> <%= image_tag('https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Google_base_44dp.png',  width: '150', height: '50') %><%end%></li>
   					<%end%>
   				</ul>
   			</div>
