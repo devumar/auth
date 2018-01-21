@@ -1,24 +1,22 @@
 # README
 
+This app Has funtion of Sigup/SignIn through Google API and Search Video on Youtube using Youtube APi and list the top video of paticluar Query.
+
+It store Name, Email and Token of user who signup through this App
+
+Using API you can search any top videos on youtube
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+How to Run
 
-* Ruby version
+After download
 
-* System dependencies
+rails s
 
-* Configuration
+rails db:create
 
-* Database creation
+rails db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Application is now running form.
