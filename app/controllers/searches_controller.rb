@@ -4,9 +4,9 @@ class SearchesController < ApplicationController
   def new
     @search = Search.new
     if request.post?
-      @search_terms = params[:search][:title]
-      youtube_service = YoutubeService.new(@search_terms)
-      @res = youtube_service.main
+      @search_query = params[:search][:title]
+      youtube_service = YoutubeService.new(@search_query)
+      @videos = youtube_service.main
     end
   end
 

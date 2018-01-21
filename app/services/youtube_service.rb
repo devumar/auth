@@ -3,9 +3,9 @@ require 'trollop'
 
 class YoutubeService
 
-	def initialize(seatch_terms)
-		@seatch_terms = seatch_terms
-		@DEVELOPER_KEY = 'AIzaSyBF0vUCWPugUQaoJW79tlcZXi3GosQ-4UA'
+	def initialize(search_query)
+		@search_query = search_query
+		@DEVELOPER_KEY = ENV['GOOGLE_API_KEY']
 		@YOUTUBE_API_SERVICE_NAME = 'youtube'
 		@YOUTUBE_API_VERSION = 'v3'
   end
@@ -25,10 +25,10 @@ class YoutubeService
 
 
 	def main
-		seatch_terms = @seatch_terms
+		search_query = @search_query
 	  opts = Trollop::options do
-			opt :q, 'Search term', :type => String, :default => seatch_terms
-	    opt :max_results, 'ssds', :type => :int, :default => 25
+			opt :q, 'Search term', :type => String, :default => search_query
+	    opt :max_results, 'Max Result', :type => :int, :default => 25
 	  end
 
 	  client, youtube = get_service
