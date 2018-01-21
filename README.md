@@ -6,8 +6,9 @@ It store Name, Email and Token of user who signup through this App
 
 Using API you can search any top videos on youtube
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here is how Preview
+![screen shot 2018-01-21 at 4 42 32 pm](https://user-images.githubusercontent.com/34249851/35193813-1bff85ca-feca-11e7-87af-947bd3c9d977.png)
+
 
 How to Run
 
